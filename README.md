@@ -17,10 +17,8 @@ Built using ** next.js, tailwindcss, manuscript, and smart contract solidity **.
 ## 🏗 Architecture
 User (Browser + Wallet)
 │
-▼
 Frontend dApp (Next.js)
 │
-▼
 Smart Contract @ Somnia Testnet
 (0x1D164f8eb94040C63a75C2762e89dc18B0364EFd)
 
@@ -47,3 +45,21 @@ Clone repository :
 ```bash
 git clone https://github.com/your-username/snicket.git
 cd snicket
+
+---
+
+Install dependencies:
+npm install
+
+Run Local : 
+npm run dev
+
+---
+
+🌐 Deployment
+
+Frontend: [link Vercel/Netlify kamu di sini]
+Smart Contract: Somnia Testnet
+
+👥 Contributors
+xRecodz
