@@ -6,7 +6,8 @@ import Layout from "@/components/Layout"
 import TicketDetailsModal from "@/components/TicketDetailsModal"
 import { useContract } from "@/hooks/useContract"
 import { useAccount } from "wagmi"
-import { SCAN_MAX, showToast } from "@/lib/utils"
+import { SCAN_MAX } from "@/lib/utils"
+import { showToast } from "@/lib/toast"
 
 // EventRow type with image support
 type EventRow = {
