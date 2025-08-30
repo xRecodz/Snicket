@@ -22,14 +22,14 @@ export default function CheckinPage() {
 
         if (data.valid) {
           setStatus("success")
-          setMessage(`Tiket valid 🎉\nPemilik: ${data.owner}`)
+          setMessage(`Tiket valid 🎉\nOwner: ${data.owner}`)
         } else {
           setStatus("error")
-          setMessage(data.reason || data.error || "Check-in gagal ❌")
+          setMessage(data.reason || data.error || "Check-in failed ❌")
         }
       } catch (err: any) {
         setStatus("error")
-        setMessage(err.message || "Terjadi kesalahan saat check-in")
+        setMessage(err.message || "An error occurred during check-in")
       }
     }
 
@@ -37,7 +37,7 @@ export default function CheckinPage() {
       check()
     } else {
       setStatus("error")
-      setMessage("TokenId atau EventId tidak valid")
+      setMessage("TokenId atau EventId Not valid")
     }
   }, [tokenId, eventId])
 
