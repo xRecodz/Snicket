@@ -37,7 +37,7 @@ export default function CheckinPage() {
       check()
     } else {
       setStatus("error")
-      setMessage("TokenId atau EventId Not valid")
+      setMessage("TokenId or EventId Not valid")
     }
   }, [tokenId, eventId])
 
