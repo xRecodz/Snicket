@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { QrScanner } from "@yudiel/react-qr-scanner"  // ✅ default import
+import QrScanner from "@yudiel/react-qr-scanner"  // ✅ default import
 
 export default function ScanPage() {
   const [result, setResult] = useState<string | null>(null)
