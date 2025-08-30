@@ -3,6 +3,7 @@ import { ethers } from "ethers"
 import snicket from "@/contracts/Snicket.json"
 import { CONTRACT_ADDRESS, RPC_URL } from "@/lib/constants"
 
+export const dynamic = "force-dynamic";  // ✅ tambahkan di paling atas
 const provider = new ethers.JsonRpcProvider(RPC_URL)
 const contract = new ethers.Contract(CONTRACT_ADDRESS, snicket.abi, provider)
 
