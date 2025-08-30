@@ -54,7 +54,7 @@ export default function CheckinPage() {
         {status === "loading" && (
           <div className="flex flex-col items-center gap-3">
             <Loader2 className="h-12 w-12 animate-spin text-primary" />
-            <p className="text-lg text-foreground/80">Memverifikasi tiket...</p>
+            <p className="text-lg text-foreground/80">Verifying the ticket...</p>
           </div>
         )}
   
