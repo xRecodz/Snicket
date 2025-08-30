@@ -57,10 +57,5 @@ npm run dev
 ```
 ---
 
-🌐 Deployment
-
-Frontend: [link Vercel/Netlify kamu di sini]
-Smart Contract: Somnia Testnet
-
 👥 Contributors
 xRecodz
