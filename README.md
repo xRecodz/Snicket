@@ -1,7 +1,7 @@
 # Snicket dApp (Somnia Ticket)
 
-Snicket is a DAPP Web3 that was built on ** Somnia TestNet ** to present an interactive experience in the main function, for example: NFT Colllectible, Defi Mini-App, Voting Dao, etc.].
-Built using ** next.js, tailwindcss, manuscript, and smart contract solidity **.
+Snicket is a DAPP Web3 that was built on **Somnia Testnet** to present an interactive experience in the main function, NFT Ticketing.
+Built using **next.js, tailwindcss, manuscript, and smart contract solidity**.
 
 ---
 
