@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated to friendly theme with light cream, pure white background, and dark gray text */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 220 13% 18%; /* Dark gray text #2d3748 */
+    --card: 45 29% 97%; /* Light cream card background #faf8f5 */
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    --primary: 35 77% 49%; /* Warm golden brown #c2410c */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 29% 88%; /* Light cream accent #f0ede6 */
+    --secondary-foreground: 220 13% 18%;
+    --muted: 45 29% 95%; /* Very light cream #f7f5f2 */
+    --muted-foreground: 220 13% 18%;
+    --accent: 35 77% 49%; /* Same as primary for consistency */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%; /* Soft red for errors #ef4444 */
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 76% 36%; /* Soft green for success #16a34a */
+    --success-foreground: 0 0% 100%;
+    --warning: 43 96% 56%; /* Warm yellow for warnings #eab308 */
+    --warning-foreground: 220 13% 18%;
+    --border: 45 29% 90%; /* Light cream border #ebe8e1 */
+    --input: 0 0% 100%;
+    --ring: 35 77% 49%; /* Primary color for focus rings */
+    --radius: 0.5rem;
+
+    /* Updated design tokens to match friendly theme */
+    --chart-1: 35 77% 49%;
+    --chart-2: 45 29% 88%;
+    --chart-3: 0 84% 60%;
+    --chart-4: 220 13% 18%;
+    --chart-5: 45 29% 95%;
+    --sidebar: 45 29% 97%;
+    --sidebar-foreground: 220 13% 18%;
+    --sidebar-primary: 35 77% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 29% 88%;
+    --sidebar-accent-foreground: 220 13% 18%;
+    --sidebar-border: 45 29% 90%;
+    --sidebar-ring: 35 77% 49%;
+  }
+
+  html {
+    @apply light; /* Switched to light theme */
+  }
+
+  body {
+    /* Updated background gradient to use friendly cream tones */
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(45 29% 98%) 50%, hsl(var(--background)) 100%);
+    @apply text-foreground min-h-screen relative;
+  }
+
+  /* Removed starfield effect for cleaner look */
+}
+
+@layer components {
+  .btn-primary {
+    /* Updated button styling to use friendly warm colors */
+    @apply bg-primary hover:bg-primary/90 
+           text-primary-foreground font-semibold py-3 px-8 rounded-lg 
+           transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105
+           border border-primary/20 hover:border-primary/40;
+  }
+
+  .btn-secondary {
+    /* Updated secondary button with cream accent */
+    @apply bg-secondary hover:bg-secondary/90 
+           text-secondary-foreground font-semibold py-3 px-8 rounded-lg 
+           transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105
+           border border-secondary/20 hover:border-secondary/40;
+  }
+
+  .btn-outline {
+    /* Added outline button variant */
+    @apply bg-transparent hover:bg-primary hover:text-primary-foreground
+           text-primary font-semibold py-3 px-8 rounded-lg 
+           transition-all duration-300 shadow-md hover:shadow-lg
+           border-2 border-primary hover:border-primary;
+  }
+
+  .card {
+    /* Clean modern card styling */
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm 
+           hover:shadow-md transition-all duration-300;
+  }
+
+  .card-feature {
+    /* Feature card with subtle hover effects */
+    @apply card hover:scale-105 group cursor-pointer
+           hover:shadow-lg hover:border-primary/20;
+  }
+
+  .hero-gradient {
+    /* Clean hero gradient background */
+    @apply relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background;
+  }
+
+  .hero-gradient::before {
+    /* Updated animated background pattern to use friendly colors */
+    content: "";
+    @apply absolute inset-0 opacity-5;
+    background-image: radial-gradient(circle at 25% 25%, hsl(var(--primary)) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary)) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+  }
+
+  /* Added modern animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Clean status badges */
+  .status-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+           bg-primary/10 text-primary border border-primary/20;
+  }
+
+  .price-badge {
+    @apply inline-flex items-center px-4 py-2 rounded-lg font-semibold
+           bg-secondary/10 text-secondary border border-secondary/20;
+  }
+}

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 60% 99%;        /* Putih kebiruan (background utama) */
+    --foreground: 240 30% 15%;        /* Ungu gelap untuk teks utama */
+    --card: 230 50% 98%;              /* Putih soft kebiruan */
+    --card-foreground: 240 30% 15%;   /* Teks ungu gelap */
+    --popover: 230 50% 98%;
+    --popover-foreground: 240 30% 15%;
+    --primary: 250 70% 60%;           /* Ungu terang (main color) */
+    --primary-foreground: 230 60% 99%;/* Kontras: putih biru */
+    --secondary: 220 70% 55%;         /* Biru lembut */
+    --secondary-foreground: 230 60% 99%;
+    --muted: 230 30% 90%;             /* Biru-abu muda */
+    --muted-foreground: 240 13% 25%;  /* Ungu-abu medium */
+    --accent: 260 60% 65%;            /* Lavender (ungu pastel) */
+    --accent-foreground: 230 60% 99%;
+    --destructive: 0 70% 45%;         /* Merah terang (error/alert) */
+    --destructive-foreground: 230 60% 99%;
+    --border: 230 30% 85%;            /* Border biru soft */
+    --input: 230 29% 95%;             /* Input box biru muda */
+    --ring: 250 80% 80%;              /* Highlight ungu soft */
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[hsl(250,70%,60%)] hover:bg-[hsl(250,70%,50%)] text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-[hsl(260,60%,65%)] hover:bg-[hsl(260,60%,55%)] text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .card {
+    @apply bg-[hsl(260,60%,97%)] border border-[hsl(260,60%,80%)] text-foreground rounded-lg p-6 shadow-md;
+  }  
+}
