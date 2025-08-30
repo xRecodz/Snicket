@@ -43,17 +43,18 @@ Smart Contract @ Somnia Testnet
 
 Clone repository :
 ```bash
-git clone https://github.com/your-username/snicket.git
+git clone https://github.com/xRecodz/snicket.git
 cd snicket
 ```
 ---
-
+```bash
 Install dependencies:
 npm install
-
+```
+```bash
 Run Local : 
 npm run dev
-
+```
 ---
 
 🌐 Deployment
