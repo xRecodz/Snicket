@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { QrScanner } from "@yudiel/react-qr-scanner"   // ✅ named import
+import { Scanner } from "@yudiel/react-qr-scanner"
 
 export default function ScanPage() {
   const [result, setResult] = useState<string | null>(null)
@@ -35,7 +35,7 @@ export default function ScanPage() {
       <h1 className="text-3xl font-bold mb-6">Ticket Scanner</h1>
 
       <div className="w-full max-w-md rounded-lg overflow-hidden">
-        <QrScanner
+        <Scanner
           onDecode={(res) => handleScan(res)}
           onError={(err) => console.error(err?.message)}
         />
