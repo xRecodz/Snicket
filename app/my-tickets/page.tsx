@@ -237,7 +237,7 @@ export default function MyTicketsPage() {
             {/* 👉 Tambahkan QR Code di bagian bawah modal */}
             <div className="mt-6 flex justify-center pb-6">
               <QRCodeCanvas
-                value={`http://localhost:3000/checkin?tokenId=${selectedTicket.tokenId}&eventId=${selectedTicket.eventId}`}
+                value={`https://snicket.vercel.app/checkin?tokenId=${selectedTicket.tokenId}&eventId=${selectedTicket.eventId}`}
                 size={180}
                 bgColor="#ffffff"
                 fgColor="#000000"
